@@ -21,7 +21,5 @@ $mesh "candles"
 $skin "models/mapobjects/chandelier/candle_m01.tga"
 $flags 0
 
-$mesh "flames"
-$skin "textures/sfx/willsflame"
-$flags 0
+
 
