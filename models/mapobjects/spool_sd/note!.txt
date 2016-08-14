@@ -1,0 +1,1 @@
+both spools can use the same normals and spec.. saving space
