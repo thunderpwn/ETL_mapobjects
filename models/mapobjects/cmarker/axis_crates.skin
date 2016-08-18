@@ -1,7 +1,7 @@
-tools,models/mapobjects/cmarker/c_shovel
-crate01,models/mapobjects/cmarker/c_box
-crate02,models/mapobjects/cmarker/c_box
-crate03,models/mapobjects/cmarker/c_box
-crateside01,models/mapobjects/cmarker/c_box_axis
-crateside02,models/mapobjects/cmarker/c_box_axis
-crateside03,models/mapobjects/cmarker/c_box_axis
+tools,models/mapobjects/cmarker/tools
+boxes,models/mapobjects/cmarker/box_m05
+edges,models/mapobjects/cmarker/box_m052
+crateside01,models/mapobjects/cmarker/axis_crate
+crateside02,models/mapobjects/cmarker/box_m05
+cmarker_flag,models/mapobjects/cmarker/cflagaxis
+flagpole,models/mapobjects/cmarker/tools
