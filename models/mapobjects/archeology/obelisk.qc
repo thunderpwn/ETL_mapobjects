@@ -13,7 +13,7 @@ $numskins 0
 // tags
 
 // meshes (surfaces)
-$mesh "obelisk"
-$skin "models/mapobjects/archeology/obelisk"
+$mesh "Plane01"
+$skin "models/mapobjects/archeology/obelisk.tga"
 $flags 0
 
