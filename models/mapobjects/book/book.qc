@@ -3,7 +3,7 @@
 $model "models/mapobjects/book/book.md3"
 // reference frame
 //$frames -1 -1
-// frame 1-1
+// frame 1-100
 $frames 1 1
 $flags 0
 $numskins 0
@@ -14,6 +14,10 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "book"
-$skin "models/mapobjects/book/book.tga"
+$skin "models/mapobjects/book/book.jpg"
+$flags 0
+
+$mesh "pages"
+$skin "models/mapobjects/book/book.jpg"
 $flags 0
 
