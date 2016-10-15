@@ -4,13 +4,17 @@ $model "models/mapobjects/tanks_sd/jagdpanther_africa_body.md3"
 // reference frame
 //$frames -1 -1
 // frame 1-100
-$frames 1 1
+$frames 1 -91
+$frame 1-91
 $flags 0
 $numskins 0
 
 // you can have one or no parent tag
 
 // tags
+$tag "tag_smoke"
+$tag "tag_player"
+$tag "tag_turret"
 
 // meshes (surfaces)
 $mesh "wheels_right"
@@ -46,7 +50,7 @@ $skin "models/mapobjects/tanks_sd/jag_cogs_right"
 $flags 0
 
 $mesh "inner tracks"
-$skin "models/mapobjects/tanks_sd/jagdpanther_full_temperate"
+$skin "models/mapobjects/tanks_sd/jagdpanther_africa"
 $flags 0
 
 $mesh "left_track"
@@ -62,18 +66,18 @@ $skin "models/mapobjects/tanks_sd/tracks_b.tga"
 $flags 0
 
 $mesh "body"
-$skin "models/mapobjects/tanks_sd/jagdpanther_full_temperate"
+$skin "models/mapobjects/tanks_sd/jagdpanther_africa"
 $flags 0
 
 $mesh "addition2"
-$skin "models/mapobjects/tanks_sd/jagdpanther_additions_temperate"
+$skin "models/mapobjects/tanks_sd/jagdpanther_additions_desert"
 $flags 0
 
 $mesh "addition3"
-$skin "models/mapobjects/tanks_sd/jagdpanther_additions_temperate"
+$skin "models/mapobjects/tanks_sd/jagdpanther_additions_desert"
 $flags 0
 
 $mesh "addition1"
-$skin "models/mapobjects/tanks_sd/jagdpanther_additions_temperate"
+$skin "models/mapobjects/tanks_sd/jagdpanther_additions_desert"
 $flags 0
 

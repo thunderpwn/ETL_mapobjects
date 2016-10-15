@@ -16,6 +16,6 @@ $tag "tag_flash"
 
 // meshes (surfaces)
 $mesh "x_turret"
-$skin "models/mapobjects/tanks_sd/jagdpanther_africa.tga"
+$skin "models/mapobjects/tanks_sd/jagdpanther_africa"
 $flags 0
 
