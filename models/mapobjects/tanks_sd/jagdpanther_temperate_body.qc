@@ -4,8 +4,8 @@ $model "models/mapobjects/tanks_sd/jagdpanther_temperate_body.md3"
 // reference frame
 //$frames -1 -1
 // frame 1-100
-$frames 1 -91
-$frame 1-91
+$frames 1 91
+$frame 1 91
 $flags 0
 $numskins 0
 
