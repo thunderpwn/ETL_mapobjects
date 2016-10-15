@@ -9,11 +9,13 @@ $flags 0
 $numskins 0
 
 // you can have one or no parent tag
+//$parenttag "tag_flash"
 
 // tags
+$tag "tag_flash"
 
 // meshes (surfaces)
 $mesh "x_turret"
-$skin "models/mapobjects/tanks_sd//jagdpanther_full_temperate.tga"
+$skin "models/mapobjects/tanks_sd/jagdpanther_full_temperate.tga"
 $flags 0
 
