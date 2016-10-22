@@ -627,7 +627,14 @@ models/mapobjects/barrel_sd/barrel_top
 	qer_editorimage textures/props/barrel_m02.tga
 	implicitMap textures/props/barrel_m02.tga
 }
-
+//** testing
+models/mapobjects/blitz_sd/blitz
+{
+	diffuseMap		models/mapobjects/blitz_sd/blitz
+	specularMap		models/mapobjects/blitz_sd/blitz_s
+	normalMap		heightMap(models/mapobjects/blitz_sd/blitz_n, 1)
+}
+//**
 models/mapobjects/blitz_sd/blitz_sd_arches
 {
 	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
@@ -2601,6 +2608,15 @@ models/mapobjects/tanks_sd/jagdpanther
 	qer_editorimage models/mapobjects/tanks_sd/jagdpanther.tga
 	{
 		map models/mapobjects/tanks_sd/jagdpanther.tga
+		rgbGen lightingDiffuse
+	}
+}
+// new texture **Thunder
+models/mapobjects/tanks_sd/jagdpanther_africa
+{
+	qer_editorimage models/mapobjects/tanks_sd/jagdpanther_africa.tga
+	{
+		map models/mapobjects/tanks_sd/jagdpanther_africa.tga
 		rgbGen lightingDiffuse
 	}
 }
