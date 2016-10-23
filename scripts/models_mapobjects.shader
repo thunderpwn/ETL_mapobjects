@@ -50,7 +50,7 @@ models/mapobjects/tanks_sd/mg42turret
 }
 
 
-
+//combine shader test
 models/mapobjects/tanks_sd/churchill_flat
 {
 	{
@@ -60,7 +60,28 @@ models/mapobjects/tanks_sd/churchill_flat
 	}
 	{
 	         	map models/mapobjects/tanks_sd/churchill_flat.tga
-	         	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+	            diffuseMap		models/mapobjects/tanks_sd/churchill_flat
+	            specularMap		models/mapobjects/tanks_sd/churchill_flat_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_flat_nrm, 1)
+            	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+	         	rgbGen lightingdiffuse
+	}
+		
+}
+
+models/mapobjects/tanks_sd/churchill_wadd
+{
+	{
+	         	map textures/effects/envmap_ice2.tga
+	         	rgbGen lightingdiffuse
+	         	tcGen environment
+	}
+	{
+	         	map models/mapobjects/tanks_sd/churchill_wadd.tga
+	            diffuseMap		models/mapobjects/tanks_sd/churchill_wadd
+	            specularMap		models/mapobjects/tanks_sd/churchill_wadd_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_wadd_nrm, 1)
+            	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
 	         	rgbGen lightingdiffuse
 	}
 		
