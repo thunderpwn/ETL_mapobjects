@@ -59,10 +59,10 @@ models/mapobjects/tanks_sd/churchill_flat
 	         	tcGen environment
 	}
 	{
-	         	map models/mapobjects/tanks_sd/churchill_flat.tga
-	            diffuseMap		models/mapobjects/tanks_sd/churchill_flat
-	            specularMap		models/mapobjects/tanks_sd/churchill_flat_spec
-            	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_flat_nrm, 1)
+	         	map models/mapobjects/tanks_sd/churchill_winter.tga
+	            diffuseMap		models/mapobjects/tanks_sd/churchill_winter
+	            specularMap		models/mapobjects/tanks_sd/churchill_winter_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_winter_nrm, 1)
             	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
 	         	rgbGen lightingdiffuse
 	}
