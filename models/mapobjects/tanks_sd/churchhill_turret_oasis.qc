@@ -20,10 +20,10 @@ $tag "tag_flash"
 
 // meshes (surfaces)
 $mesh "turret"
-$skin "models/mapobjects/tanks_sd/churchill_oasis"
+$skin "models/mapobjects/tanks_sd/churchhill_oasis"
 $flags 0
 
 $mesh "turret_add"
-$skin "models/mapobjects/tanks_sd/churchill_oadd"
+$skin "models/mapobjects/tanks_sd/churchhill_oadd"
 $flags 0
 
