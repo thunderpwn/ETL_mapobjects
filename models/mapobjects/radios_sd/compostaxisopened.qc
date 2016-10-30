@@ -94,6 +94,6 @@ $skin "models/mapobjects/radios_sd/command6.tga"
 $flags 0
 
 $mesh "cabinet"
-$skin "models/mapobjects/radios_sd/crate.tga"
+$skin "models/mapobjects/radios_sd/crate1"
 $flags 0
 
