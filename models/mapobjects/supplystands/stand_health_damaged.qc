@@ -14,10 +14,10 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "stand_health"
-$skin "models/mapobjects/supplystands/metal_shelves.tga"
+$skin "models/mapobjects/supplystands/frame.tga"
 $flags 0
 
 $mesh "shelf"
-$skin "models/mapobjects/supplystands/frame.tga"
+$skin "models/mapobjects/supplystands/metal_shelves.tga"
 $flags 0
 
