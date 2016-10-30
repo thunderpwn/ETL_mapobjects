@@ -56,16 +56,7 @@ models/mapobjects/tanks_sd/churchill_flat
                 diffuseMap		models/mapobjects/tanks_sd/churchill_winter
 	            specularMap		models/mapobjects/tanks_sd/churchill_winter_spec
             	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_winter_nrm, 1)
-	{
-	         	map textures/effects/envmap_ice2.tga
-	         	rgbGen lightingdiffuse
-	         	tcGen environment
-	}
-	{
-	         	map models/mapobjects/tanks_sd/churchill_winter.tga
-	            blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-	         	rgbGen lightingdiffuse
-	}
+	
 		
 }
 
@@ -74,16 +65,7 @@ models/mapobjects/tanks_sd/churchill_wadd
                 diffuseMap		models/mapobjects/tanks_sd/churchill_wadd
 	            specularMap		models/mapobjects/tanks_sd/churchill_wadd_spec
             	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_wadd_nrm, 1)
-	{
-	         	map textures/effects/envmap_ice2.tga
-	         	rgbGen lightingdiffuse
-	         	tcGen environment
-	}
-	{
-	         	map models/mapobjects/tanks_sd/churchill_wadd.tga
-	            blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-	         	rgbGen lightingdiffuse
-	}
+				
 		
 }
 
@@ -2635,11 +2617,9 @@ models/mapobjects/tanks_sd/jagdpanther
 // new texture **Thunder
 models/mapobjects/tanks_sd/jagdpanther_africa
 {
-	qer_editorimage models/mapobjects/tanks_sd/jagdpanther_africa.tga
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_africa.tga
-		rgbGen lightingDiffuse
-	}
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_desert
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_desert_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_desert_nrm, 1)
 }
 
 models/mapobjects/tanks_sd/jagdpanther_additions_des_s
