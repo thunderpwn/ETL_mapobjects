@@ -1,75 +1,840 @@
-//Rich - 03-05-03 Updated Chris' pump shaders
-//Rich - 10-05-03 Added mg42 turret mount shaders
+// ETL Mapobject shader by thunder 2016
 
 models/mapobjects/pump_sd/bottom
 {
-	{
-	         	map textures/effects/envmap_slate_90.tga
-	         	rgbGen lightingdiffuse
-	         	tcmod scale 1.5 1.5
-	         	tcGen environment
-	}
-	{
-	         	map models/mapobjects/pump_sd/bottom.tga
-	         	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-	         	rgbGen lightingdiffuse
-	}
-		
+	
+	         	diffuseMap	    models/mapobjects/pump_sd/bottom
+	            specularMap		models/mapobjects/pump_sd/bottom_spec
+            	normalMap		heightMap(models/mapobjects/pump_sd/bottom_nrm, 1)
+	
 }
 
 models/mapobjects/pump_sd/top
 {
-	{
-			map textures/effects/envmap_slate_90.tga
-	         	rgbGen lightingdiffuse
-	         	tcmod scale 1.5 1.5
-	         	tcGen environment
-	}
-	{
-	         	map models/mapobjects/pump_sd/top.tga
-	         	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-	         	rgbGen lightingdiffuse
-	}
-		
+	       
+	            diffuseMap	    models/mapobjects/pump_sd/top
+	            specularMap		models/mapobjects/pump_sd/top_spec
+            	normalMap		heightMap(models/mapobjects/pump_sd/top_nrm, 1)
 }
+
+//**********************************TANK****************************
+//*********************************************************************
 
 
 models/mapobjects/tanks_sd/mg42turret
-{
 	{
-	         	map textures/effects/envmap_slate_90.tga
-	         	rgbGen lightingdiffuse
-	         	tcGen environment
-	}
-	{
-	         	map models/mapobjects/tanks_sd/mg42turret.tga
-	         	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-	         	rgbGen lightingdiffuse
+	         	diffuseMap		models/mapobjects/tanks_sd/mg42turret
+	            specularMap		models/mapobjects/tanks_sd/mg42turret_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/mg42turret_nrm, 1)
+	         	
 	}
 		
-}
 
 
-//combine shader test
-models/mapobjects/tanks_sd/churchill_flat
+
+models/mapobjects/tanks_sd/churchhill_flat
 {
-                diffuseMap		models/mapobjects/tanks_sd/churchill_winter
-	            specularMap		models/mapobjects/tanks_sd/churchill_winter_spec
-            	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_winter_nrm, 1)
+                diffuseMap		models/mapobjects/tanks_sd/churchhill_winter
+	            specularMap		models/mapobjects/tanks_sd/churchhill_winter_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/churchhill_winter_nrm, 1)
 	
 		
 }
 
-models/mapobjects/tanks_sd/churchill_wadd
+models/mapobjects/tanks_sd/churchhill_wadd
 {               
-                diffuseMap		models/mapobjects/tanks_sd/churchill_wadd
-	            specularMap		models/mapobjects/tanks_sd/churchill_wadd_spec
-            	normalMap		heightMap(models/mapobjects/tanks_sd/churchill_wadd_nrm, 1)
+                diffuseMap		models/mapobjects/tanks_sd/wadd
+	            specularMap		models/mapobjects/tanks_sd/wadd_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/wadd_nrm, 1)
 				
 		
 }
 
+models/mapobjects/tanks_sd/bits_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod scroll 0 -2
+	}
+}
 
+models/mapobjects/tanks_sd/bits_backward_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod scroll 0 -2
+	}
+}
+
+models/mapobjects/tanks_sd/bits_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod scroll 0 2
+	}
+}
+
+models/mapobjects/tanks_sd/bits_forward_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod scroll 0 2
+	}
+}
+
+
+models/mapobjects/tanks_sd/bits_forward_oasis
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod scroll 0 1.5
+	}
+}
+
+models/mapobjects/tanks_sd/bits_l
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/bits_l_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/bits_r
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/bits_r_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/bits_static
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/bits_static_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		map models/mapobjects/tanks_sd/tracks_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/churchhill_flat_oasis
+{
+                diffuseMap		models/mapobjects/tanks_sd/churchhill_oasis
+	            specularMap		models/mapobjects/tanks_sd/churchhill_oasis_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/churchhill_oasis_nrm, 1)
+	
+		
+}
+
+models/mapobjects/tanks_sd/churchhill_oadd
+{               
+                diffuseMap		models/mapobjects/tanks_sd/oadd
+	            specularMap		models/mapobjects/tanks_sd/oadd_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/oadd_nrm, 1)
+				
+		
+}
+
+models/mapobjects/tanks_sd/explosive
+{
+	qer_editorimage models/mapobjects/tanks_sd/explosive.tga
+	surfaceparm metalsteps
+	{
+		map models/mapobjects/tanks_sd/explosive.tga
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_alt_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_alt_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_left
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_left_s
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen vertex
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_right
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_right_s
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen vertex
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_snow_alt_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_snow_alt_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_snow_left
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a_s.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_cogs_snow_right
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a_s.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_tracks_alt_backward
+{
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+		tcMod scroll -1 0
+	}
+}
+
+models/mapobjects/tanks_sd/jag_tracks_alt_forward
+{
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+		tcMod scroll 1 0
+	}
+}
+
+models/mapobjects/tanks_sd/jag_tracks_left
+{
+	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_tracks_left_s
+{
+	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen vertex
+	}
+}
+
+models/mapobjects/tanks_sd/jag_tracks_right
+{
+	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_tracks_right_s
+{
+	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen vertex
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_alt_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_alt_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_left
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_left_s
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen vertex
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_right
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_right_s
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen vertex
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_snow_alt_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_snow_alt_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_snow_left
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel2_a_s.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag_wheels_snow_right
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel2_a_s.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+
+// new texture **Thunder
+models/mapobjects/tanks_sd/jagdpanther_africa
+{
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_desert
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_desert_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_desert_nrm, 1)
+}
+
+
+models/mapobjects/tanks_sd/jagdpanther_additions_desert
+{
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_additions_desert
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_additions_desert_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_additions_desert_nrm, 1)
+}
+models/mapobjects/tanks_sd/jagdpanther_additions_temperate
+{
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_additions_temperate
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_additions_temperate_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_additions_temperate_nrm, 1)
+}
+
+models/mapobjects/tanks_sd/jagdpanther_additions_snow
+{
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_additions_snow
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_additions_snow_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_additions_snow_nrm, 1)
+}
+
+models/mapobjects/tanks_sd/jagdpanther_full
+{
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_full
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_full_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_full_nrm, 1)
+}
+
+// Added by Rich May 10 2003
+models/mapobjects/tanks_sd/mg42turret_2
+{
+	            diffuseMap		models/mapobjects/tanks_sd/mg42turret_2
+	            specularMap		models/mapobjects/tanks_sd/mg42turret_2_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/mg42turret_2_nrm, 1)
+}
+
+models/mapobjects/tanks_sd/jagdpanther_full_temperate
+{
+	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_full_temperate
+	            specularMap		models/mapobjects/tanks_sd/jagdpanther_full_temperate_spec
+            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_full_temperate_2_nrm, 1)
+}
+
+
+models/mapobjects/tanks_sd/jag2_cogs_alt_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 75
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_cogs_alt_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_cogs_left
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_cogs_right
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_tracks_alt_backward
+{
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+		tcMod scroll -1 0
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_tracks_alt_forward
+{
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+		tcMod scroll 1 0
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_tracks_left
+{
+	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_tracks_right
+{
+	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
+	{
+		map models/mapobjects/tanks_sd/tracks_b.tga
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_wheels_alt_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_b.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_wheels_alt_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_b.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -75
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_wheels_left
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_b.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_b.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/jag2_wheels_right
+{
+	qer_alphafunc gequal 0.5
+	qer_editorimage models/mapobjects/tanks_sd/wheel_b.tga
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_b.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_backward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -60
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_backward_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -60
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_forward
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 60
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_forward_oasis
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 90
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_forward_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 60
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_l
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_l_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_r
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/wheel_r_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/wheel2_backward_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate -60
+	}
+}
+
+models/mapobjects/tanks_sd/wheel2_forward_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+		tcMod rotate 60
+	}
+}
+
+models/mapobjects/tanks_sd/wheel2_l_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+
+models/mapobjects/tanks_sd/wheel2_r_a
+{
+	qer_alphafunc gequal 0.5
+	cull disable
+	{
+		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
+		alphaFunc GE128
+		rgbGen lightingDiffuse
+	}
+}
+//*********************************CP'S********************
+//********************************************************
 models/mapobjects/radios_sd/blue2
 {
 	polygonOffset
@@ -607,165 +1372,66 @@ models/mapobjects/radios_sd/axis_sign
      surfaceparm nomarks
      implicitMap models/mapobjects/radios_sd/axis_sign.tga
 }
+//**********************raster*****************************
 
 models/mapobjects/raster/moto
 {
-	cull twosided
-	implicitmask -
+	            diffuseMap		models/mapobjects/raster/moto
+	            specularMap		models/mapobjects/raster/moto_spec
+            	normalMap		heightMap(models/mapobjects/raster/moto_nrm, 1)
 }
+
 
 models/mapobjects/raster/moto_bag
 {
-	implicitmap -
+	            diffuseMap		models/mapobjects/raster/moto_bago
+	            specularMap		models/mapobjects/raster/moto_bag_spec
+            	normalMap		heightMap(models/mapobjects/raster/moto_bag_nrm, 1)
 }
 
-models/mapobjects/barrel_sd/barrel_side
+//****************************barrels***************************
+
+models/mapobjects/barrel_sd/barrel
 {
-	qer_editorimage textures/props/barrel_m01.tga
-	implicitMap textures/props/barrel_m01.tga
+	qer_editorimage models/mapobjects/barrel_sd/barrel
+	{
+	            diffuseMap		models/mapobjects/barrel_sd/barrel
+	            specularMap		models/mapobjects/barrel_sd/barrel_spec
+            	normalMap		heightMap(models/mapobjects/barrel_sd/barrel_nrm, 1)
+    }
 }
 
-models/mapobjects/barrel_sd/barrel_top
-{
-	qer_editorimage textures/props/barrel_m02.tga
-	implicitMap textures/props/barrel_m02.tga
-}
+
 //** testing
 models/mapobjects/blitz_sd/blitz
 {
 	diffuseMap		models/mapobjects/blitz_sd/blitz
-	specularMap		models/mapobjects/blitz_sd/blitz_s
-	normalMap		heightMap(models/mapobjects/blitz_sd/blitz_n, 1)
+	specularMap		models/mapobjects/blitz_sd/blitz_spec
+	normalMap		heightMap(models/mapobjects/blitz_sd/blitz_nrm, 1)
+}
+
+models/mapobjects/blitz_sd/tarpaulin
+{
+	diffuseMap		models/mapobjects/blitz_sd/tarpaulin
+	specularMap		models/mapobjects/blitz_sd/tarpaulin_spec
+	normalMap		heightMap(models/mapobjects/blitz_sd/tarpaulin_nrm, 1)
+}
+
+models/mapobjects/blitz_sd/blitz_snow
+{
+	diffuseMap		models/mapobjects/blitz_sd/blitz_snow
+	specularMap		models/mapobjects/blitz_sd/blitz_spec
+	normalMap		heightMap(models/mapobjects/blitz_sd/blitz_nrm, 1)
+}
+
+models/mapobjects/blitzsd/tarpaulin_snow
+{
+	diffuseMap		models/mapobjects/blitz_sd/tarpaulin_snow
+	specularMap		models/mapobjects/blitz_sd/tarpaulin_spec
+	normalMap		heightMap(models/mapobjects/blitz_sd/tarpaulin_nrm, 1)
 }
 //**
-models/mapobjects/blitz_sd/blitz_sd_arches
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
-	cull twosided
-	implicitMap models/mapobjects/blitz_sd/blitz_sd.tga
-}
 
-models/mapobjects/blitz_sd/blitz_sd_arches_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
-	cull twosided
-	implicitMap models/mapobjects/blitz_sd/blitz_sd.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_arches_s
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_s.tga
-	cull twosided
-	implicitMap models/mapobjects/blitz_sd/blitz_sd_s.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_arches_s_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_s.tga
-	cull twosided
-	implicitMap models/mapobjects/blitz_sd/blitz_sd_s.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_body
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
-	{
-		map models/mapobjects/blitz_sd/blitz_sd.tga
-		rgbgen lightingDiffuse
-	}
-}
-
-models/mapobjects/blitz_sd/blitz_sd_body_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
-	implicitMap models/mapobjects/blitz_sd/blitz_sd.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_body_s
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_s.tga
-	implicitMap models/mapobjects/blitz_sd/blitz_sd_s.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_body_s_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_s.tga
-	implicitMap models/mapobjects/blitz_sd/blitz_sd_s.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_interior_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_interior.tga
-	cull twosided
-	implicitMap models/mapobjects/blitz_sd/blitz_sd_interior.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_interior02_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_interior02.tga
-	cull twosided
-	implicitMap models/mapobjects/blitz_sd/blitz_sd_interior02.tga
-}
-
-models/mapobjects/blitz_sd/blitz_sd_windows
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
-	{
-		map textures/effects/envmap_slate.tga
-		rgbGen lightingdiffuse
-		tcGen environment
-	}
-	{
-		map models/mapobjects/blitz_sd/blitz_sd.tga
-		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-		rgbgen lightingDiffuse
-	}
-}
-
-models/mapobjects/blitz_sd/blitz_sd_windows_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd.tga
-	{
-		map textures/effects/envmap_slate.tga
-		rgbGen lightingdiffuse
-		tcGen environment
-	}
-	{
-		map models/mapobjects/blitz_sd/blitz_sd.tga
-		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-		rgbgen lightingdiffuse
-	}
-}
-
-models/mapobjects/blitz_sd/blitz_sd_windows_s
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_s.tga
-	{
-		map textures/effects/envmap_slate.tga
-		rgbGen lightingdiffuse
-		tcGen environment
-	}
-	{
-		map models/mapobjects/blitz_sd/blitz_sd_s.tga
-		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-		rgbgen lightingDiffuse
-	}
-}
-
-models/mapobjects/blitz_sd/blitz_sd_windows_s_mm
-{
-	qer_editorimage models/mapobjects/blitz_sd/blitz_sd_s.tga
-	{
-		map textures/effects/envmap_slate.tga
-		rgbGen lightingdiffuse
-		tcGen environment
-	}
-	{
-		map models/mapobjects/blitz_sd/blitz_sd_s.tga
-		blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-		rgbgen environment
-	}
-}
 
 models/mapobjects/bodyparts/i_body1
 {
@@ -2167,811 +2833,7 @@ models/mapobjects/supplystands/metal_shelves
 	}
 }
 
-models/mapobjects/tanks_sd/bits_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod scroll 0 -2
-	}
-}
 
-models/mapobjects/tanks_sd/bits_backward_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod scroll 0 -2
-	}
-}
-
-models/mapobjects/tanks_sd/bits_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod scroll 0 2
-	}
-}
-
-models/mapobjects/tanks_sd/bits_forward_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod scroll 0 2
-	}
-}
-
-
-models/mapobjects/tanks_sd/bits_forward_oasis
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod scroll 0 1.5
-	}
-}
-
-models/mapobjects/tanks_sd/bits_l
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/bits_l_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/bits_r
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/bits_r_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/bits_static
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/bits_static_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		map models/mapobjects/tanks_sd/tracks_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/churchill_flat_oasis
-{
-	{
-		map models/mapobjects/tanks_sd/churchill_flat_oasis.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/explosive
-{
-	qer_editorimage models/mapobjects/tanks_sd/explosive.tga
-	surfaceparm metalsteps
-	{
-		map models/mapobjects/tanks_sd/explosive.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_alt_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_alt_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_left
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_left_s
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_right
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_right_s
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_snow_alt_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_snow_alt_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_snow_left
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a_s.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_cogs_snow_right
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a_s.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_tracks_alt_backward
-{
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-		tcMod scroll -1 0
-	}
-}
-
-models/mapobjects/tanks_sd/jag_tracks_alt_forward
-{
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-		tcMod scroll 1 0
-	}
-}
-
-models/mapobjects/tanks_sd/jag_tracks_left
-{
-	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_tracks_left_s
-{
-	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag_tracks_right
-{
-	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_tracks_right_s
-{
-	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_alt_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_alt_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_left
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_left_s
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_right
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_right_s
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel2_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_snow_alt_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_snow_alt_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_snow_left
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel2_a_s.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag_wheels_snow_right
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel2_a_s.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a_s.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther
-{
-	qer_editorimage models/mapobjects/tanks_sd/jagdpanther.tga
-	{
-		map models/mapobjects/tanks_sd/jagdpanther.tga
-		rgbGen lightingDiffuse
-	}
-}
-// new texture **Thunder
-models/mapobjects/tanks_sd/jagdpanther_africa
-{
-	            diffuseMap		models/mapobjects/tanks_sd/jagdpanther_desert
-	            specularMap		models/mapobjects/tanks_sd/jagdpanther_desert_spec
-            	normalMap		heightMap(models/mapobjects/tanks_sd/jagdpanther_desert_nrm, 1)
-}
-
-models/mapobjects/tanks_sd/jagdpanther_additions_des_s
-{
-	qer_editorimage models/mapobjects/tanks_sd/jagdpanther_additions_desert.tga
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_additions_desert.tga
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther_additions_desert
-{
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_additions_desert.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther_additions_temperate
-{
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_additions_temperate.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther_additions_snow
-{
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_additions_snow.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther_full
-{
-	qer_editorimage models/mapobjects/tanks_sd/jagdpanther_full.tga
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_full.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-// Added by Rich May 10 2003
-models/mapobjects/tanks_sd/mg42turret_2
-{
-	{
-		map models/mapobjects/tanks_sd/mg42turret_2.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther_full_temperate
-{
-	qer_editorimage models/mapobjects/tanks_sd/jagdpanther_full_temperate.tga
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_full_temperate.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jagdpanther_full_s
-{
-	qer_editorimage models/mapobjects/tanks_sd/jagdpanther_full.tga
-	{
-		map models/mapobjects/tanks_sd/jagdpanther_full.tga
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_cogs_alt_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 75
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_cogs_alt_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_cogs_left
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_cogs_right
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_a.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_tracks_alt_backward
-{
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-		tcMod scroll -1 0
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_tracks_alt_forward
-{
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-		tcMod scroll 1 0
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_tracks_left
-{
-	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_tracks_right
-{
-	qer_editorimage models/mapobjects/tanks_sd/tracks_b.tga
-	{
-		map models/mapobjects/tanks_sd/tracks_b.tga
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_wheels_alt_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_b.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_wheels_alt_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_b.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -75
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_wheels_left
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_b.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_b.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/jag2_wheels_right
-{
-	qer_alphafunc gequal 0.5
-	qer_editorimage models/mapobjects/tanks_sd/wheel_b.tga
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_b.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_backward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -60
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_backward_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -60
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_forward
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 60
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_forward_oasis
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 90
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_forward_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 60
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_l
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_l_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_r
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/wheel_r_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/wheel2_backward_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate -60
-	}
-}
-
-models/mapobjects/tanks_sd/wheel2_forward_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-		tcMod rotate 60
-	}
-}
-
-models/mapobjects/tanks_sd/wheel2_l_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
-
-models/mapobjects/tanks_sd/wheel2_r_a
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	{
-		clampmap models/mapobjects/tanks_sd/wheel2_a.tga
-		alphaFunc GE128
-		rgbGen lightingDiffuse
-	}
-}
 
 models/mapobjects/torture/glass
 {
@@ -3173,58 +3035,4 @@ models/mapobjects/vehicles/wagon/wag_whl
 }
 
 
-models/mapobjects/xp_chandelier/md_chand_arm
-{
-	cull none
-	implicitMask -
-}
 
-models/mapobjects/xp_dino_skel/dino_alpha_bones
-{
-	cull none
-	implicitMask -
-}
-
-models/mapobjects/xp_dino_skel/dino_alpha_skull
-{
-	cull none
-	implicitMask -
-}
-
-models/mapobjects/xp_dino_skel/dino_bone
-{
-	cull none
-	implicitMask -
-}
-
-models/mapobjects/xp_sarcophagus/dsarcophagus
-{
-	{
-		map textures/effects/tinfx.jpg
-		rgbGen vertex
-		tcGen environment
-	}
-	{
-		map models/mapobjects/xp_sarcophagus/dsarcophagus.tga
-		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
-		rgbGen vertex
-	}
-}
-
-models/mapobjects/xp_sdkfz222/sdkfz222_3
-{
-	cull none
-	implicitMask -
-}
-
-models/mapobjects/xp_sdkfz222/sdkfz222_3gray
-{
-	cull none
-	implicitMask -
-}
-
-models/mapobjects/xp_sdkfz222/sdkfz222_3gray_d
-{
-	cull none
-	implicitMask -
-}
