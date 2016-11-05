@@ -1091,7 +1091,23 @@ models/mapobjects/radios_sd/iron
          	rgbGen lightingdiffuse
 	}
 }
+//new texture Thunder
+models/mapobjects/radios_sd/steel
 
+{
+    	qer_editorimage models/mapobjects/radios_sd/steel.tga
+    	cull twosided
+         {
+         	map textures/effects/envmap_radar.tga
+         	rgbGen lightingdiffuse
+         	tcGen environment
+         }
+         {
+         	map models/mapobjects/radios_sd/steel.tga
+         	blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
+         	rgbGen lightingdiffuse
+	}
+}
 models/mapobjects/radios_sd/neutralcabinet
 
 {
@@ -2541,33 +2557,7 @@ models/mapobjects/tree_temperate_sd/floor_leaf1
 
 
 //**********************************************************************
-models/mapobjects/portable_radar_sd/portable_radar_sd
-{
-	cull disable
-	surfaceparm nomarks
-	{
-	         map textures/effects/envmap_slate.tga
-	         //tcmod scale 2 2
-	         rgbGen lightingdiffuse
-	         tcGen environment
-	}
-	{
-	         map models/mapobjects/portable_radar_sd/portable_radar_sd.tga
-	         blendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA
-	         //blendfunc blend
-	         rgbGen lightingdiffuse
-	}
-	
-	
-}
 
-models/mapobjects/portable_radar_sd/portable_radar_t_sd
-{
-	qer_alphafunc gequal 0.5
-	cull disable
-	surfaceparm nomarks
-	implicitMask -
-}
 
 models/mapobjects/props_sd/basket
 {
@@ -2947,6 +2937,10 @@ models/mapobjects/trees_sd/bush_s
 
 models/mapobjects/trees_sd/winterbranch01
 {
+                diffuseMap	    models/mapobjects/trees_sd/wintertrunk01
+	            specularMap		models/mapobjects/trees_sd/wintertrunk01_spec
+            	normalMap		heightMap(models/mapobjects/trees_sd/wintertrunk01_nrm, 1)
+    {
 	qer_alphafunc gequal 0.5
 	cull twosided
 	surfaceparm alphashadow
@@ -2954,55 +2948,26 @@ models/mapobjects/trees_sd/winterbranch01
 	surfaceparm trans
 	nopicmip
 	implicitMask -
+	{
 }
 
 models/mapobjects/trees_sd/wintertrunk01
 {
+                diffuseMap	    models/mapobjects/trees_sd/wintertrunk01
+	            specularMap		models/mapobjects/trees_sd/wintertrunk01_spec
+            	normalMap		heightMap(models/mapobjects/trees_sd/wintertrunk01_nrm, 1)
+    {
 	qer_alphafunc gequal 0.5
 	surfaceparm alphashadow
 	surfaceparm nomarks
 	surfaceparm trans
 	nopicmip
 	implicitMask -
+    }
 }
 
-models/mapobjects/ui/flame
-{
-	nomipmaps
-	nopicmip
-	{
-		map ui_mp/assets/flame.tga
-		blendfunc blend
-		rgbGen identity
-		tcmod scale .4 .4
-		tcmod scroll 0 .08
-		tcmod turb .5 .02 0 .1
-	}
-	{
-		map ui_mp/assets/flame.tga
-		blendfunc blend
-		tcmod scale .3 .3
-		tcmod scroll 0.001 .04
-		tcmod turb .5 .04 0 .1
-	}
-}
 
-models/mapobjects/vehicles/sherman_s
-{
-	implicitBlend -
-}
 
-models/mapobjects/vehicles/truck_shadow
-{
-	implicitBlend -
-}
-
-models/mapobjects/vehicles/truckside4bloop
-{
-	qer_editorimage models/mapobjects/vehicles/truckside4.tga
-	cull twosided
-	implicitMask models/mapobjects/vehicles/truckside4.tga
-}
 
 // Lamp - Thomas C - 21 - 02 - 2003
 //-----------------------------------------------------------
