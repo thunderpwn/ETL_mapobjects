@@ -13,11 +13,11 @@ $numskins 0
 // tags
 
 // meshes (surfaces)
-$mesh "branches"
+$mesh "trunk"
 $skin "models/mapobjects/tree_etl/pine_trunk.tga"
 $flags 0
 
-$mesh "trunk"
+$mesh "branches"
 $skin "models/mapobjects/tree_etl/pinebranch.tga"
 $flags 0
 

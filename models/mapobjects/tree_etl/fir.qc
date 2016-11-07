@@ -14,10 +14,10 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "branches"
-$skin "models/mapobjects/tree_etl/fir_trunk.tga"
+$skin "models/mapobjects/tree_etl/firbranch.tga"
 $flags 0
 
 $mesh "trunk"
-$skin "models/mapobjects/tree_etl/firbranch.tga"
+$skin "models/mapobjects/tree_etl/fir_trunk.tga"
 $flags 0
 
