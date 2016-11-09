@@ -14,14 +14,14 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "palm_dual_bend"
-$skin "C.tga"
+$skin "models/mapobjects/tree_desert_sd/palms"
 $flags 0
 
 $mesh "Regroup05"
-$skin "models/mapobjects/tree_desert_sd/palms.tga"
+$skin "models/mapobjects/tree_desert_sd/palms"
 $flags 0
 
 $mesh "Regroup06"
-$skin "models/mapobjects/trees_dessert_sd/palms.tga"
+$skin "models/mapobjects/trees_dessert_sd/palms"
 $flags 0
 

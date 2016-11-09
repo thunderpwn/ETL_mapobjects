@@ -14,6 +14,6 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "leaf"
-$skin "models/mapobjects/tree_desert_sd/palms.tga"
+$skin "models/mapobjects/tree_desert_sd/palms"
 $flags 0
 
