@@ -13,7 +13,11 @@ $numskins 0
 // tags
 
 // meshes (surfaces)
-$mesh "palm_straight"
-$skin "models/mapobjects/tree_desert_sd/palms.tga"
+$mesh "trunk"
+$skin "models/mapobjects/tree_desert_sd/palm_trunk.tga"
+$flags 0
+
+$mesh "leaves"
+$skin "models/mapobjects/tree_desert_sd/palm_leaf1.tga"
 $flags 0
 
