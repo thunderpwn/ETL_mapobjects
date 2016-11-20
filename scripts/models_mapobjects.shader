@@ -5,7 +5,7 @@ models/mapobjects/pump_sd/bottom
 	
 	         	diffuseMap	    models/mapobjects/pump_sd/bottom
 	            specularMap		models/mapobjects/pump_sd/bottom_spec
-            	normalMap		heightMap(models/mapobjects/pump_sd/bottom_nrm, 1)
+            	normalMap		models/mapobjects/pump_sd/bottom_nrm
 	
 }
 
@@ -14,7 +14,7 @@ models/mapobjects/pump_sd/top
 	       
 	            diffuseMap	    models/mapobjects/pump_sd/top
 	            specularMap		models/mapobjects/pump_sd/top_spec
-            	normalMap		heightMap(models/mapobjects/pump_sd/top_nrm, 1)
+            	normalMap		models/mapobjects/pump_sd/top_nrm
 }
 
 //**********************************TANK****************************
