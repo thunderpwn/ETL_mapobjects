@@ -2,9 +2,9 @@
 //
 $model "models/mapobjects/xlab/cart.md3"
 // reference frame
-//$frames -1 -1
+$frames -1 -1
 // frame 1-1
-$frames 1 1
+
 $flags 0
 $numskins 0
 

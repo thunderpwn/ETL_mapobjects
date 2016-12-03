@@ -50,5 +50,5 @@ $skin "models/mapobjects/raster/moto.tga"
 $flags 0
 
 $mesh "bag"
-$skin "models/mapobjects/raster/moto.tga"
+$skin "models/mapobjects/raster/moto_bag.tga"
 $flags 0

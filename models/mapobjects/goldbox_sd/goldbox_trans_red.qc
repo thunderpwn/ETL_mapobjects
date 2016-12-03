@@ -14,6 +14,6 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "goldbox"
-$skin "textures/sfx/translucent_red"
+$skin "textures/mapfx/translucent_red"
 $flags 0
 

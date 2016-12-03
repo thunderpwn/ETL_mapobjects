@@ -14,10 +14,10 @@ $numskins 0
 
 // meshes (surfaces)
 $mesh "lamps"
-$skin "models/mapobjects/light/scone2.jpg"
+$skin "models/mapobjects/light/sconce2"
 $flags 0
 
 $mesh "back"
-$skin "models/mapobjects/light/scone.tga"
+$skin "models/mapobjects/light/sconce"
 $flags 0
 
