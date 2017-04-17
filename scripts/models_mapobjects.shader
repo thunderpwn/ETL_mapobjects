@@ -3582,6 +3582,13 @@ models/mapobjects/tanks_sd/wheel2_r_a
 
 //*********************************************toolshed***********************************
 
+models/mapobjects/toolshed/gen3
+{
+qer_editorimage models/mapobjects/toolshed/gen3
+diffusemap models/mapobjects/toolshed/gen3
+specularmap models/mapobjects/toolshed/gen3_spec
+bumpmap models/mapobjects/toolshed/gen3_nrm
+}
 
 models/mapobjects/toolshed/b_generator
 {
