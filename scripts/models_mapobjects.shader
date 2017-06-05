@@ -445,6 +445,24 @@ models/mapobjects/etl_obj/docs
 			 bumpmap models/mapobjects/etl_obj/docs_nrm
 }
 
+
+//******************************etl_beach***********************************
+
+models/mapobjects/etl_beach/hedgehog
+{
+             qer_editorimage models/mapobjects/etl_beach/hedgehog
+			 diffusemap models/mapobjects/etl_beach/hedgehog
+			 specularmap models/mapobjects/etl_beach/hedgehog_spec
+			 bumpmap models/mapobjects/etl_beach/hedgehog_nrm
+}
+
+models/mapobjects/etl_beach/b_gate
+{
+             qer_editorimage models/mapobjects/etl_beach/b_gate
+			 diffusemap models/mapobjects/etl_beach/b_gate
+			 specularmap models/mapobjects/etl_beach/b_gate_spec
+			 bumpmap models/mapobjects/etl_beach/b_gate_nrm
+}
 //****************************************************************************************************
 
 //*************************flag*****************************************
@@ -1607,6 +1625,21 @@ models/mapobjects/portable_radar_sd/radar_box
 			 bumpmap models/mapobjects/portable_radar_sd/radar_box_nrm
 }
 
+models/mapobjects/etl_train/buffer
+{
+             qer_editorimage models/mapobjects/etl_train/buffer
+			 diffusemap models/mapobjects/etl_train/buffer
+			 specularmap models/mapobjects/etl_train/buffer_spec
+			 bumpmap models/mapobjects/etl_train/buffer_nrm
+}
+
+models/mapobjects/etl_beach/hedgehog
+{
+             qer_editorimage models/mapobjects/etl_beach/hedgehog
+			 diffusemap models/mapobjects/etl_beach/hedgehog
+			 specularmap models/mapobjects/etl_beach/hedgehog_spec
+			 bumpmap models/mapobjects/etl_beach/hedgehog_nrm
+}
 
 //******************************************************************************************************************************
 
@@ -3582,12 +3615,21 @@ models/mapobjects/tanks_sd/wheel2_r_a
 
 //*********************************************toolshed***********************************
 
+
+models/mapobjects/toolshed/weldtankxl
+{
+        qer_editorimage models/mapobjects/toolshed/weldtankxl
+         diffusemap models/mapobjects/toolshed/weldtankxl
+         specularmap models/mapobjects/toolshed/weldtankxl_spec
+         bumpmap models/mapobjects/toolshed/weldtankxl_nrm
+}
+ 
 models/mapobjects/toolshed/gen3
 {
-qer_editorimage models/mapobjects/toolshed/gen3
-diffusemap models/mapobjects/toolshed/gen3
-specularmap models/mapobjects/toolshed/gen3_spec
-bumpmap models/mapobjects/toolshed/gen3_nrm
+        qer_editorimage models/mapobjects/toolshed/gen3
+        diffusemap models/mapobjects/toolshed/gen3
+        specularmap models/mapobjects/toolshed/gen3_spec
+        bumpmap models/mapobjects/toolshed/gen3_nrm
 }
 
 models/mapobjects/toolshed/b_generator
