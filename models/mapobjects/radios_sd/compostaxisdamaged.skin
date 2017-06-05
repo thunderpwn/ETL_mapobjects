@@ -1,5 +1,9 @@
 axis_sign,models/mapobjects/radios_sd/axis_sign
 crate,models/mapobjects/radios_sd/crate1
+steel,models/mapobjects/radios_sd/steel
+cabinet,models/mapobjects/radios_sd/crate1
+door,models/mapobjects/radios_sd/crate1
+door2,models/mapobjects/radios_sd/crate1
 command1,models/mapobjects/radios_sd/command1
 command2,models/mapobjects/radios_sd/command2
 command3,models/mapobjects/radios_sd/command3

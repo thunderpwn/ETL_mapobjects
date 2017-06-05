@@ -1,2 +1,6 @@
 neutral_sign,models/mapobjects/radios_sd/neutral_sign
-crate,models/mapobjects/radios_sd/crate
+crate,models/mapobjects/radios_sd/crate1
+steel,models/mapobjects/radios_sd/steel
+cabinet,models/mapobjects/radios_sd/crate1
+door,models/mapobjects/radios_sd/crate1
+door2,models/mapobjects/radios_sd/crate1

@@ -1,5 +1,9 @@
 allied_sign,models/mapobjects/radios_sd/allied_sign
 crate,models/mapobjects/radios_sd/crate1
+steel,models/mapobjects/radios_sd/steel
+cabinet,models/mapobjects/radios_sd/crate1
+door,models/mapobjects/radios_sd/crate1
+door2,models/mapobjects/radios_sd/crate1
 command1a,models/mapobjects/radios_sd/command1a
 command2a,models/mapobjects/radios_sd/command2
 command3a,models/mapobjects/radios_sd/command3
